@@ -1,29 +1,28 @@
-  <title>GreatSword V2</title>
-<link rel="manifest" href="/manifest.json">
- <style>
-    img {
-      display: block;
-      margin: auto;
-      position: absolute;
-      top: 20%;
-      left: 0;
-      right: 0;
-    }
-  </style>
-  <img src="cooltext434237807922262.png">
- <style>
-    body {
-      background-color: #1b1a1a;
-    }
-  </style>
+<title>GreatSword V2</title>
+<style>
+   img {
+     display: block;
+     margin: auto;
+     position: absolute;
+     top: 20%;
+     left: 0;
+     right: 0;
+   }
+ </style>
+ <img src="cooltext434237807922262.png">
+<style>
+   body {
+     background-color: #1b1a1a;
+   }
+ </style>
 <script src="/js/index.js"></script>
 <title></title>
 <script src="/js/go.js"></script>
 <div class="title">
-  <h1 id="title1"></h1>
+ <h1 id="title1"></h1>
 </div>
 <div class="searchbox" id="searchbox">
-  <input class="search" id="search" placeholder='Search Google or input a URL...' type='text'/>
+ <input class="search" id="search" placeholder='Search Google or input a URL...' type='text'/>
 </div>
 <div class="icons">
 </div>
@@ -31,72 +30,82 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
 
 .bg{
-  top: 0%;
-  left: 0%;
-  position: absolute;
-  width:100%;
-  height:100%;
+ top: 0%;
+ left: 0%;
+ position: absolute;
+ width:100%;
+ height:100%;
 }
 .searchbox{
-  width:80%;
-  height:10%;
-  color: #FFFFFF;
-  position: absolute;
-  left:10%;
-  top:45%;
+ width:80%;
+ height:10%;
+ color: #FFFFFF;
+ position: absolute;
+ left:10%;
+ top:45%;
 }
 .search{
-  text-align: center;
-  background: transparent;
-  border-radius: 25px;
-  border-radius: 25px;
-  border: 4px solid #FFFFFF;
-  color: #FFFFFF;
-  width:100%;
-  height:100%;
+ text-align: center;
+ background: transparent;
+ border-radius: 25px;
+ border-radius: 25px;
+ border: 4px solid #FFFFFF;
+ color: #FFFFFF;
+ width:100%;
+ height:100%;
 }
 .title{
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  top:15%;
-  float: center;
-  align: center;
-  text-align: center;
-  color: #FFFFFF;
+ font-family: "Roboto", Arial, Helvetica, sans-serif;
+ position: absolute;
+ width: 100%;
+ height: 100px;
+ top:15%;
+ float: center;
+ align: center;
+ text-align: center;
+ color: #FFFFFF;
 }
 ::placeholder {
-  margin: auto;
-  color: #FFFFFF;
-  font-size: 1.2em;
+ margin: auto;
+ color: #FFFFFF;
+ font-size: 1.2em;
 }
 .icons{
-  align: center;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  bottom: 0%;
-  left: 0%;
+ align: center;
+ text-align: center;
+ position: absolute;
+ width: 100%;
+ height: 70px;
+ bottom: 0%;
+ left: 0%;
 }
 </style>
 <script>
 var proxy=localStorage.getItem("proxy");
 if (proxy==undefined){
-  proxy="Corrosion";
+ proxy="Corrosion";
 }
 var fontsize1=2560/screen.width*18;
 var fontsize2=2560/screen.width*6;
 
 title1.style.fontSize = fontsize1+"px";
 search.style.fontSize = fontsize2+"px";
-  
+ 
 document.addEventListener("keypress", function onEvent(event) {
-    if (event.key === "Enter") {
-      var url=search.value;
-      window.location.href=window.location.href+"service/gateway?url=" + url;
-    }
+   if (event.key === "Enter") {
+     var url=search.value;
+     window.location.href=window.location.href+"service/gateway?url=" + url;
+   }
 });
 </script>
-
+<style>
+  .bottom-image {
+  position: absolute;
+  bottom: -100;
+  left: 50%;
+  transform: translateX(-50%);
+}
+</style>
+<div class="container">
+  <img src="cooltext434246975754168.png" alt="Cool Text" class="bottom-image">
+</div>
