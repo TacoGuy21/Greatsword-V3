@@ -6,7 +6,7 @@ I made this repo to hopefully modernize Greatsword, and keep its feel.
 
 # Links:
 
-(I'll add some later)
+(I'll add some more later)
 
 https://d3rrx7-8080.csb.app/
 
