@@ -6,7 +6,7 @@ I made this repo to hopefully modernize Greatsword, and keep its feel.
 
 # Links:
 
-(I'll add more later)
+(I'll add some later)
 
 # Made With DM Unblocker
 
