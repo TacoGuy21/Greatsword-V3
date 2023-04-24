@@ -6,19 +6,7 @@ I made this repo to hopefully modernize Greatsword, and keep its feel.
 
 # Links:
 
-(I'll add some more later)
-
-https://35vfrz-8080.csb.app/
-
-https://vi7gwz-8080.csb.app/
-
-https://8euu2t-8080.csb.app/
-
-https://78bz2v-8080.csb.app/
-
-https://5ruiys-8080.csb.app/
-
-https://qqxp89-8080.csb.app/
+(Make some yourself lol)
 
 
 # Made With DM Unblocker
