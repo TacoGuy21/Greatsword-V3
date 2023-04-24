@@ -10,24 +10,6 @@ I made this repo to hopefully modernize Greatsword, and keep its feel.
 
 https://d3rrx7-8080.csb.app/
 
-https://8n5fv8-8080.csb.app/
-
-https://11odge-8080.csb.app/
-
-https://b124xi-8080.csb.app/
-
-https://hrcmuz-8080.csb.app/
-
-https://o0legl-8080.csb.app/
-
-https://j3vcuh-8080.csb.app/
-
-https://dmortn-8080.csb.app/
-
-https://q5jt32-8080.csb.app/
-
-https://f6m19c-8080.csb.app/
-
 # Made With DM Unblocker
 
 Credit to Dragonmaster.
