@@ -26,4 +26,4 @@ Credit to Dragonmaster.
 
 <img width="941" alt="image" src="https://user-images.githubusercontent.com/119009502/234257963-b32e4981-d77a-420b-b45a-36e322319a03.png">
 
-<img width="950" alt="image" src="https://user-images.githubusercontent.com/119009502/234257998-56c56d97-c76f-428f-83db-8eb9db813f8d.png">
+
