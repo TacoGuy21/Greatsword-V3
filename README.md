@@ -4,6 +4,8 @@ The sequel to GreatSword. Greatsword was a proxy I made, but it had very outdate
 
 I made this repo to hopefully modernize Greatsword, and keep its feel.
 
+# Current bugs:
+Chrome safe browsing may falsely flag links.
 # Links:
 
 (Make some yourself lol)
