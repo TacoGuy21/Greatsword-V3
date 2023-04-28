@@ -4,6 +4,7 @@ The sequel to GreatSword. Greatsword was a proxy I made, but it had very outdate
 
 I made this repo to hopefully modernize Greatsword, and keep its feel.
 
+Please star if you enjoy, it helps this repo grow.
 # Current bugs:
 Chrome safe browsing may falsely flag links.
 # Links:
@@ -26,4 +27,4 @@ Credit to Dragonmaster.
 <img width="941" alt="image" src="https://user-images.githubusercontent.com/119009502/234257963-b32e4981-d77a-420b-b45a-36e322319a03.png">
 
 
-Please star if you enjoy.
+
