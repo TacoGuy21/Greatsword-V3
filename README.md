@@ -5,6 +5,8 @@ The sequel to GreatSword. Greatsword was a proxy I made, but it had very outdate
 I made this repo to hopefully modernize Greatsword, and keep its feel.
 
 Please star if you enjoy, it helps this repo grow.
+
+I used a cloak template for this, which is why it has arc, the money does not go to me. 
 # Current bugs:
 Chrome safe browsing may falsely flag links.
 # Links:
