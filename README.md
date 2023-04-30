@@ -18,7 +18,7 @@ Credit to Dragonmaster.
 
 # Showcase:
 
-<img width="941" alt="image" src="https://user-images.githubusercontent.com/119009502/234257963-b32e4981-d77a-420b-b45a-36e322319a03.png">
+<img width="931" alt="image" src="https://user-images.githubusercontent.com/119009502/235354351-89ca60ca-7dcb-48ac-a2e3-8ec292dd6ae8.png">
 
 Listen to will wood and the tapeworms.
 
