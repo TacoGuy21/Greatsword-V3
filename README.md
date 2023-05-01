@@ -6,7 +6,8 @@ I made this repo to hopefully modernize Greatsword, and keep its feel.
 
 Please star if you enjoy, it helps this repo grow.
 
-Scroll down for a showcase.
+# Scroll down for a showcase
+Showcase at the bottom of the README.
 
 # Current bugs:
 Chrome safe browsing may falsely flag links.
