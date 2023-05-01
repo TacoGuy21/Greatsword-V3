@@ -11,9 +11,8 @@ Please star if you enjoy, it helps this repo grow.
 # Current bugs:
 Chrome safe browsing may falsely flag links.
 # Links:
-https://06p59y-8080.csb.app/
 
-(Make some yourself lol)
+Discord: https://discord.com/invite/ujxUzjgQ
 
 # Made With DM Unblocker
 
