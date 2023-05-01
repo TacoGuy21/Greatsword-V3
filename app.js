@@ -25,12 +25,12 @@ const proxy = new Corrosion({
 
 proxy.bundleScripts();
 
-app.use(express.static("./public", {
+app.use(express.static("./public/frontend", {
     extensions: ["html"]
 }));
 
 app.get("/", function(req, res){
-    res.sendFile("index.html", {root: "./public"});
+    res.sendFile("index.html", {root: "./public/frontend"});
 });
 
 app.get("/suggestions", function(req, res){
@@ -48,7 +48,7 @@ app.use(function (req, res) {
     if (req.url.startsWith(proxy.prefix)) {
       proxy.request(req,res);
     } else {
-      res.status(404).sendFile("404.html", {root: "./public"});
+      res.status(404).sendFile("404.html", {root: "./public/frontend/"});
     }
 })
 

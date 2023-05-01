@@ -84,3 +84,5 @@ document.getElementById("settings").style.display = "none";
 }
 
 document.onclick = hidesettings
+
+})
