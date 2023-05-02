@@ -15,8 +15,9 @@ Showcase at the bottom of the README.
 Chrome safe browsing may falsely flag links.
 # Links:
 
-Discord: https://discord.gg/BMxe6D9CKv
+Discord: https://discord.gg/BMxe6D9CKv (Contains Greatsword links)
 
+New links added to the discord every day.
 # Made With DM Unblocker
 
 Credit to Dragonmaster.
