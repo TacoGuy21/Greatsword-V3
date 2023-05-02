@@ -15,7 +15,7 @@ Showcase at the bottom of the README.
 Chrome safe browsing may falsely flag links.
 # Links:
 
-Discord: https://discord.com/invite/ujxUzjgQ
+Discord: https://discord.gg/BMxe6D9CKv
 
 # Made With DM Unblocker
 
