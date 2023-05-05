@@ -25,7 +25,7 @@ Credit to Dragonmaster.
 
 # Showcase:
 
-<img width="953" alt="image" src="https://user-images.githubusercontent.com/119009502/235760400-2a0e90cc-875d-414d-bff8-0437b2193559.png">
+<img width="959" alt="image" src="https://user-images.githubusercontent.com/119009502/236574677-7cd9292b-9110-4375-9c80-6d62dab9c349.png">
 
 
 
