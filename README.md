@@ -19,7 +19,7 @@ Discord: https://discord.gg/BMxe6D9CKv (Contains Greatsword links)
 
 New links added to the discord every day.
 
-# "Made" With DM Unblocker 3
+# Made With DM Unblocker 3
 
 Credit to this gigachad
 
