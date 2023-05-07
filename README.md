@@ -10,6 +10,9 @@ I made this repo to hopefully modernize Greatsword, and keep its feel.
 
 Please star if you enjoy, it helps this repo grow.
 
+# IMPORTANT
+In order to use "unsafe" Greatsword V2 links you must put your pointer in the middle of the "deceptive site" screen, and type "thisisunsafe". This may redirect you to a new tab, or something else. You may have to repeat this process up to 10 times
+
 # Scroll down for a showcase
 Showcase at the bottom of the README.
 
