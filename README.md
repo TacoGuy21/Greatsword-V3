@@ -37,8 +37,12 @@ Credit to this gigachad
 
 
 
-Listen to will wood and the tapeworms.
-
+# Some links
+(Read "IMPORTANT")
+https://op1r9m-8080.csb.app/
+https://2q9o7u-8080.csb.app/
+https://xhes3d-8080.csb.app/
+https://yrvk20-8080.csb.app/
 
 
 
