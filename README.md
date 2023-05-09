@@ -18,10 +18,11 @@ Showcase at the bottom of the README.
 * Chrome safe browsing may falsely flag links.
 * about:blank cloak reports as "unsafe" and typing "thisisunsafe" does not work.
 # Links:
-Discord: https://discord.gg/BMxe6D9CKv (Contains Greatsword links)
+Discord:
 <br>
 ![Discord](http://invidget.switchblade.xyz/BMxe6D9CKv)
 <br>
+(Contains Greatsword links)
 New links **are** added to the discord every day.
 
 ### Made With DM Unblocker 3
