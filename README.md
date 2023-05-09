@@ -23,6 +23,7 @@ Discord:
 ![Discord](http://invidget.switchblade.xyz/BMxe6D9CKv)
 <br>
 (Contains Greatsword links)
+
 New links **are** added to the discord every day.
 
 ### Made With DM Unblocker 3
@@ -48,7 +49,7 @@ https://yrvk20-8080.csb.app/
 
 https://hp6qdf-8080.csb.app/
 
-https://hp6qdf-8080.csb.app/
+
 
 
 
