@@ -28,7 +28,7 @@ New links **are** added to the discord every day.
 
 ### Made With DM Unblocker 3
 
-Credit to this [gigachad](https://github.com/dragon731012/) for [DM Unblocker](https://github.com/dragon731012/DM-unbl0cker-corrosion/)
+Credit to this [Gigachad](https://github.com/dragon731012/) for [DM Unblocker](https://github.com/dragon731012/DM-unbl0cker-corrosion/)
 
 # Showcase:
 
