@@ -19,7 +19,9 @@ Showcase at the bottom of the README.
 * about:blank cloak reports as "unsafe" and typing "thisisunsafe" does not work.
 # Links:
 Discord: https://discord.gg/BMxe6D9CKv
+
 <br>
+
 ![Discord](http://invidget.switchblade.xyz/BMxe6D9CKv)
 <br>
 (Contains Greatsword links)
