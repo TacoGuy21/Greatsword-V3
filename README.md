@@ -22,8 +22,6 @@ Discord: https://discord.gg/BMxe6D9CKv
 <br>
 ![Discord](http://invidget.switchblade.xyz/BMxe6D9CKv)
 <br>
-(Contains Greatsword links)
-
 New links **are** added to the discord every day.
 
 Credit to this [Gigachad](https://github.com/dragon731012/) for [DM Unblocker](https://github.com/dragon731012/DM-unbl0cker-corrosion/)
