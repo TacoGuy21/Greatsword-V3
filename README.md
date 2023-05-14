@@ -47,7 +47,7 @@ https://hp6qdf-8080.csb.app/
 
 Credit to Fuckneco for remaking this readme.
 
-
+If you enjoy Greatsword, be sure to check out https://github.com/CosmicProxy-DEV/Cosmic-Unblocker
 
 
 
