@@ -4,7 +4,7 @@
 
 ##### Only deploy this with CodeSandbox and/or Render.
 
-If you enjoy Greatsword, be sure to check out https://github.com/CosmicProxy-DEV/Cosmic-Unblocker (Better proxy by me)
+Check out https://github.com/CosmicProxy-DEV/Cosmic-Unblocker (Better proxy by me and Cosmos)
 
 This is the sequel to GreatSword v1 (deleted). Greatsword was a proxy I made, but it had very outdated scripts compared to new tech. 
 <br>
