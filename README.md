@@ -49,7 +49,7 @@ https://yrvk20-8080.csb.app/
 
 https://hp6qdf-8080.csb.app/
 
-Credit to Fuckneco for remaking this readme.
+Credit to NotJustMeHere for remaking this readme.
 
 
 
