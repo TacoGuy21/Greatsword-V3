@@ -29,6 +29,8 @@ Discord: https://discord.gg/BMxe6D9CKv
 New links **are** added to the discord every day.
 
 Credit to this [Gigachad](https://github.com/dragon731012/) for [DM Unblocker](https://github.com/dragon731012/DM-unbl0cker-corrosion/)
+<br>
+![DM Unblocker Discord](https://invidget.switchblade.xyz/hrXXUeWgrn)
 
 # Showcase:
 
