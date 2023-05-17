@@ -51,27 +51,7 @@ https://yrvk20-8080.csb.app/
 
 https://hp6qdf-8080.csb.app/
 
-Credit to Fuckneco for remaking this readme.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Credits
+NotJustMeHere - modifying the README (formerly FuckNico)
+<br>
+Tacogamerman - epic dude
