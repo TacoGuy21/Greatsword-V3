@@ -36,21 +36,6 @@ Credit to this [Gigachad](https://github.com/dragon731012/) for [DM Unblocker](h
 
 <img width="959" alt="image" src="https://user-images.githubusercontent.com/119009502/236574677-7cd9292b-9110-4375-9c80-6d62dab9c349.png">
 
-
-
-# Some links
-(Read "IMPORTANT")
-
-https://op1r9m-8080.csb.app/
-
-https://2q9o7u-8080.csb.app/
-
-https://xhes3d-8080.csb.app/
-
-https://yrvk20-8080.csb.app/
-
-https://hp6qdf-8080.csb.app/
-
 Credit to NotJustMeHere for remaking this readme.
 
 
