@@ -34,7 +34,7 @@ Credit to this [Gigachad](https://github.com/dragon731012/) for [DM Unblocker](h
 <img width="959" alt="image" src="https://user-images.githubusercontent.com/119009502/236574677-7cd9292b-9110-4375-9c80-6d62dab9c349.png">
 
 # Credits
-NotJustMeHere - modifying the README (formerly FuckNico)
+NotJustMeHere - Modifying the README (Formerly FuckNico)
 <br>
 Tacogamerman - Creator of Gsv2
 <br>
