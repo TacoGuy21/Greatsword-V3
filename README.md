@@ -43,9 +43,7 @@ Dragonmaster - Creator of Dm Unblocker
 
 # Deployment (Test)
 
-[![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/Tacogamerman/Greatsword-Unblocker-V2) 
-
-
+[![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/Tacogamerman/Greatsword-Unblocker-V2/)
 
 
 
