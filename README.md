@@ -25,7 +25,7 @@ Discord: https://discord.gg/BMxe6D9CKv
 ![Discord](http://invidget.switchblade.xyz/BMxe6D9CKv)
 
 
-New links **are** added to the discord every day.
+New links ***are*** added to the discord every day.
 
 Credit to this [Gigachad](https://github.com/dragon731012/) for [DM Unblocker](https://github.com/dragon731012/DM-unbl0cker-corrosion/)
 
@@ -38,7 +38,7 @@ NotJustMeHere - Modifying the README (Formerly FuckNico)
 <br>
 Tacogamerman - Creator of Gsv2
 <br>
-Dragonmaster - Creator of Dm Unblocker
+Dragonmaster73101 - Creator of Dm Unblocker
 
 
 
