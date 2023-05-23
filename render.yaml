@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: greatsword-v2
+    env: docker
+    plan: free
