@@ -4,7 +4,13 @@
 
 ##### Only deploy this with CodeSandbox and/or Render.
 
-Check out https://github.com/CosmicProxy-DEV/Cosmic-Unblocker (Proxy by me and Cosmos)
+Check out https://github.com/Tacogamerman/Cosmic-Official (Proxy by me and Cosmos)
+
+Whatever you do, do NOT star the repo it is forked from. Cosmos has completely removed all forms of credit to me, and my contribution access.
+
+The forked repo in this link is the official repo, if you had starred the old one, undo it.
+
+
 
 This is the sequel to GreatSword v1 (deleted). Greatsword was a proxy I made, but it had very outdated scripts compared to new tech. 
 <br>
