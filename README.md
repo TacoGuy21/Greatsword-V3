@@ -40,9 +40,6 @@ Tacogamerman - Creator of Gsv2
 <br>
 Dragonmaster73101 - Creator of Dm Unblocker
 
-# Deployment 
-
-[![Deploy to Render](https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg)](https://render.com/deploy?repo=https://github.com/Tacogamerman/Greatsword-Unblocker-V2/)
 
 
 
