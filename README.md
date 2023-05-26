@@ -31,7 +31,8 @@ Credit to this [Gigachad](https://github.com/dragon731012/) for [DM Unblocker](h
 
 # Showcase:
 
-<img width="959" alt="image" src="https://user-images.githubusercontent.com/119009502/236574677-7cd9292b-9110-4375-9c80-6d62dab9c349.png">
+<img width="959" alt="image" src="https://github.com/Tacogamerman/Greatsword-Unblocker-V2/assets/119009502/cf5fa4d3-fa49-4982-91a8-8e22d879d51f">
+
 
 # Credits
 NotJustMeHere - Modifying the README (Formerly FuckNico)
