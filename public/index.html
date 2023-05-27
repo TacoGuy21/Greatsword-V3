@@ -143,8 +143,6 @@ document.addEventListener("keypress", function onEvent(event) {
   padding: 10px 20px;
   cursor: pointer;
 }
-
-c
   </style>
   <style>
     button:hover {
@@ -156,8 +154,74 @@ c
       (function () {var url = document.URL; var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement("iframe"); iframe.style.border = "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe); var script = win.document.createElement("script"); script.src = ""; win.document.body.appendChild(script); })();
     }
     </script>
-    <button onclick="blank();">About:blank cloak</button>
-<button onclick="window.location.href='https://github.com/Tacogamerman/Greatsword-Unblocker-V2'">GitHub Repo (Star)</button>
-	<button onclick="window.location.href='https://discord.gg/BMxe6D9CKv'">Greatsword Discord</button>
-<button onclick="window.location.href='/games.html'">Chat room (Removed)</button>
-<button onclick="window.location.href='/games.html'">Games</button>
+<head>
+    <style>
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      
+      .navbar {
+        background-color: #333;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+      }
+  
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+  
+      .navbar ul li {
+        display: inline;
+      }
+  
+      .navbar ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+      }
+  
+      .navbar ul li a:hover {
+        background-color: #555;
+        opacity: 1;
+      }
+  
+
+      .content {
+        margin-top: 50px; 
+        padding: 20px;
+      }
+  
+      .navbar-brand {
+        color: #fff;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: 25px; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="chat.html">Chat (Removed)</a></li>
+        <li><a href="https://discord.gg/BMxe6D9CKv">Discord</a></li>
+        <li><a href="https://github.com/Tacogamerman/Greatsword-Unblocker-V2">GitHub</a></li>
+        <li class="navbar-brand">Greatsword Services</li>
+      </ul>
+    </div>
