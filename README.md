@@ -29,13 +29,13 @@ New links ***are*** added to the discord every day.
 
 Credit to this [Gigachad](https://github.com/dragon731012/) for [DM Unblocker](https://github.com/dragon731012/DM-unbl0cker-corrosion/)
 
-# Showcase:
+# 𝓢𝓱𝓸𝔀𝓬𝓪𝓼𝓮
 
 <img width="960" alt="image" src="https://github.com/Tacogamerman/Greatsword-Unblocker-V2/assets/119009502/7c037656-33d4-46c9-a526-01284162bd33">
 
 
 
-# Credits
+# 𝓒𝓻𝓮𝓭𝓲𝓽𝓼
 NotJustMeHere - Modifying the README (Formerly FuckNico)
 <br>
 Tacogamerman - Creator of Gsv2
