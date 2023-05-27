@@ -4,7 +4,7 @@
 
 ##### Only deploy this with CodeSandbox and/or Render.
 
-# What is greatsword?
+# 𝓦𝓱𝓪𝓽 𝓲𝓼 𝓰𝓻𝓮𝓪𝓽𝓼𝔀𝓸𝓻𝓭?
 
 This is the sequel to GreatSword v1 (deleted). Greatsword was a proxy I made, but it had very outdated scripts compared to new tech. 
 <br>
@@ -12,13 +12,13 @@ I made this repo to hopefully modernize Greatsword, and keep its feel.
 <br>
 Please star if you enjoy, it helps this repo grow.
 
-# IMPORTANT
+# 𝓘𝓜𝓟𝓞𝓡𝓣𝓐𝓝𝓣
 In order to use "unsafe" Greatsword V2 links you must put your pointer in the middle of the "deceptive site" screen, and type "thisisunsafe". This may redirect you to a new tab, or something else. You may have to go back to the same site and repeat this process up to 10 times. Eventually it will become usable.
 
-# Current bugs:
+# 𝓒𝓾𝓻𝓻𝓮𝓷𝓽 𝓫𝓾𝓰𝓼:
 * Chrome safe browsing may falsely flag links.
 * If this happens, about:blank cloak reports as "unsafe" and typing "thisisunsafe" does not work.
-# Links:
+# 𝕃𝕚𝕟𝕜𝕤:
 Discord: https://discord.gg/BMxe6D9CKv
 
 
