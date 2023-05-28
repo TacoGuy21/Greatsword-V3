@@ -4,7 +4,7 @@
         display: none;
     }
     scrollbar-width: none;
-    -ms-overflow-style: none;
+    ms-overflow-style: none;
 </style>
 <style>
    img {
@@ -43,8 +43,8 @@
  height:100%;
 }
 .searchbox{
- width:80%;
- height:10%;
+ width: 80%;
+ height:9%;
  color: #FFFFFF;
  position: absolute;
  left:10%;
@@ -129,7 +129,6 @@ document.addEventListener("keypress", function onEvent(event) {
 <body>
 </body>
 
-<h1 class="bottom-heading">Search the world wide web, Unrestricted.</h1>
 
 
 <style>
@@ -226,3 +225,39 @@ document.addEventListener("keypress", function onEvent(event) {
         <li class="navbar-brand">Greatsword Services</li>
       </ul>
     </div>
+    <style>
+        .button-container {
+          position: fixed;
+          bottom: 30%;
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+          padding: 10px;
+        }
+        
+        .button-container a.button {
+            border-radius: 5px;
+      border: 3px solid rgb(61, 59, 59);
+      font-family: Arial, sans-serif;
+  font-size: 100%;
+  background-color: rgb(53, 51, 51);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 3px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="button-container">
+        <a href="https://github.com/Tacogamerman" class="button">My github</a>
+        <a href="https://discord.gg/BMxe6D9CKv" class="button">Greatsword discord</a>
+        <a href="games.html" class="button">Games</a>
+        <script>
+            function blank(){
+              (function () {var url = document.URL; var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement("iframe"); iframe.style.border = "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe); var script = win.document.createElement("script"); script.src = ""; win.document.body.appendChild(script); })();
+            }
+            </script>
+            <button onclick="blank();">Open in about:blank</button>
+      </div>
