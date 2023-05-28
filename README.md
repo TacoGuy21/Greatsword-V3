@@ -31,7 +31,7 @@ Credit to this [Gigachad](https://github.com/dragon731012/) for DM Unblocker.
 
 # 𝓢𝓱𝓸𝔀𝓬𝓪𝓼𝓮
 
-<img width="956" alt="image" src="https://github.com/Tacogamerman/Greatsword-V2/assets/119009502/f9c3b275-ceef-4d09-8216-fb90c4a851b9">
+<img width="959" alt="image" src="https://github.com/Tacogamerman/Greatsword-V2/assets/119009502/ca14b682-6ff9-4fe7-a3d0-42357f9341bb">
 
 
 
