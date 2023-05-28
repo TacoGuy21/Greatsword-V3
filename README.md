@@ -43,6 +43,10 @@ Tacogamerman - Creator of Gsv2
 Dragonmaster73101 - Creator of Dm Unblocker
 <br>
 Skool - Creator of skooleagler
+<br>
+Cosmosthedev - Creator of eaglercraft client folder
+<br>
+I1aw - Gfiles
 
 
 
