@@ -46,7 +46,7 @@ Skool - Creator of skooleagler
 <br>
 Cosmosthedev - Creator of eaglercraft client folder
 <br>
-I1aw - Gfiles
+I1aw - Provider of Gfiles
 
 
 
