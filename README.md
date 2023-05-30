@@ -4,7 +4,7 @@
 
 ##### Only deploy this with CodeSandbox and/or Render.
 
-# 𝓦𝓱𝓪𝓽 𝓲𝓼 𝓰𝓻𝓮𝓪𝓽𝓼𝔀𝓸𝓻𝓭?
+# What is Greatsword?
 
 This is the sequel to GreatSword v1 (deleted). Greatsword was a proxy I made, but it had very outdated scripts compared to new tech. 
 <br>
@@ -12,13 +12,13 @@ I made this repo to hopefully modernize Greatsword, and keep its feel.
 <br>
 Please star if you enjoy, it helps this repo grow.
 
-# 𝓘𝓜𝓟𝓞𝓡𝓣𝓐𝓝𝓣
+# Important
 In order to use "unsafe" Greatsword V2 links you must put your pointer in the middle of the "deceptive site" screen, and type "thisisunsafe". This may redirect you to a new tab, or something else. You may have to go back to the same site and repeat this process up to 10 times. Eventually it will become usable.
 
-# 𝓒𝓾𝓻𝓻𝓮𝓷𝓽 𝓫𝓾𝓰𝓼:
+# Current bugs:
 * Chrome safe browsing may falsely flag links.
 * If this happens, about:blank cloak reports as "unsafe" and typing "thisisunsafe" does not work.
-# 𝕃𝕚𝕟𝕜𝕤:
+# Links:
 Discord: https://discord.gg/BMxe6D9CKv
 
 
@@ -29,12 +29,12 @@ New links ***are*** added to the discord every day.
 
 Credit to this [Gigachad](https://github.com/dragon731012/) for DM Unblocker.
 
-# 𝓢𝓱𝓸𝔀𝓬𝓪𝓼𝓮
+# Showcase
 
 <img width="960" alt="image" src="https://github.com/Tacogamerman/Greatsword-V2/assets/119009502/ff62c42d-cf4e-436b-a92a-45e7285f091e">
 
 
-# 𝓒𝓻𝓮𝓭𝓲𝓽𝓼
+# Credits
 NotJustMeHere - Modifying the README (Formerly FuckNico)
 <br>
 Tacogamerman - Creator of Gsv2
