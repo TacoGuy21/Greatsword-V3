@@ -1,11 +1,10 @@
 ![JustAImage](https://user-images.githubusercontent.com/119009502/233846585-d725d79c-6e1a-4b29-b2be-3f247ed6d9e5.png)
 
-A stupid project made by a dumb kid in middle school.
-
 Only deploy this with CodeSandbox and/or Render.
 
 # What is Greatsword?
-
+A stupid project made by a dumb kid in middle school.
+<br>
 This is the sequel to GreatSword v1 (deleted). Greatsword was a proxy I made, but it had very outdated scripts compared to new tech. 
 <br>
 I made this repo to hopefully modernize Greatsword, and keep its feel.
