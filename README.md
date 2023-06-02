@@ -7,7 +7,7 @@ Only deploy this with CodeSandbox and/or Render.
 # What is Greatsword?
 A stupid project made by a dumb kid in middle school.
 <br>
-This is the sequel to GreatSword v1 (deleted). Greatsword was a proxy I made, but it had very outdated scripts compared to new tech. 
+This is the sequel to GreatSword v1 (deleted). Greatsword was an unblocker I made, but it had very outdated scripts compared to new tech. 
 <br>
 I made this repo to hopefully modernize Greatsword, and keep its feel.
 <br>
