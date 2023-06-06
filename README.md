@@ -30,11 +30,6 @@ New links ***are*** added to the discord every day.
 
 Credit to this [Gigachad](https://github.com/dragon731012/) for DM Unblocker.
 
-# Showcase
------
-<img width="960" alt="image" src="https://github.com/Tacogamerman/Greatsword-V2/assets/119009502/ff62c42d-cf4e-436b-a92a-45e7285f091e">
-
-
 # Credits
 NotJustMeHere - Modifying the README (Formerly FuckNico)
 <br>
