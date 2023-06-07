@@ -14,7 +14,7 @@ const Corrosion = require("./lib/server")
 const proxy = new Corrosion({
     prefix: config.prefix,
     codec: config.codec,
-    title: "Greatsword",
+    title: "Greatsword V2",
     forceHttps: true,
     requestMiddleware: [
         Corrosion.middleware.blacklist([
