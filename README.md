@@ -5,7 +5,6 @@ This says 97% html because of the gfiles lmao
 Only deploy this with CodeSandbox and/or Render.
 
 # What is Greatsword?
-<br>
 A stupid project made by a dumb kid in middle school.
 <br>
 This is the sequel to GreatSword v1 (deleted). Greatsword was an unblocker I made, but it had very outdated scripts compared to new tech. 
@@ -15,7 +14,6 @@ I made this repo to hopefully modernize Greatsword, and keep its feel.
 Please star if you enjoy, it helps this repo grow.
 
 # Important
-<br>
 In order to use "unsafe" Greatsword V2 links you must put your pointer in the middle of the "deceptive site" screen, and type "thisisunsafe". This may redirect you to a new tab, or something else. You may have to go back to the same site and repeat this process up to 10 times. Eventually it will become usable.
 
 # Current bugs:
