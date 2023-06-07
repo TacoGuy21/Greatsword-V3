@@ -31,7 +31,7 @@ New links ***are*** added to the discord every day.
 Credit to this [Gigachad](https://github.com/dragon731012/) for DM Unblocker.
 
 # Credits
-NotJustMeHere - Modifying the README (THREE TIMES)
+NotJustMeHere - Modifying the README (Three times)
 <br>
 Tacogamerman - Creator of Gsv2
 <br>
