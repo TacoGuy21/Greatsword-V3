@@ -39,7 +39,7 @@ Dragonmaster73101 - Creator of Dm Unblocker
 <br>
 Skool - Creator of skooleagler
 <br>
-Cosmosthedev - Creator of eaglercraft client folder
+Cosmosthedev - Provider of an eaglercraft client folder
 <br>
 I1aw - Provider of Gfiles
 
