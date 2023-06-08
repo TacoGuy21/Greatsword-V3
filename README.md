@@ -35,8 +35,6 @@ NotJustMeHere - Modifying the README (Three times)
 <br>
 Tacogamerman - Creator of Gsv2
 <br>
-Dragonmaster73101 - Creator of Dm Unblocker
-<br>
 Skool - Creator of skooleagler
 <br>
 Cosmosthedev - Provider of an eaglercraft client folder
