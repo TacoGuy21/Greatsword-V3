@@ -19,8 +19,7 @@ In order to use "unsafe" Greatsword V2 links you must put your pointer in the mi
 # Current bugs:
 * Chrome safe browsing may falsely flag links.
 * If this happens, about:blank cloak reports as "unsafe" and typing "thisisunsafe" does not work.
-* The font inside the search bar has broken.
-* Greatsword is currently broken to the point where it is nearly unusable. (Multiple reasons)
+* Greatsword may be broken in chrome on windows devices.
 # Links:
 Discord: https://discord.gg/BMxe6D9CKv
 
