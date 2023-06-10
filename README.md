@@ -4,6 +4,8 @@ This says 97% html because of the gfiles Lmao
 
 Only deploy this with CodeSandbox and/or Render.
 
+The official link ***is*** going to be slow
+
 # What is Greatsword?
 A stupid project made by a dumb kid in middle school.
 <br>
