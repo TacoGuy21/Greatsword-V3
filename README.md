@@ -25,7 +25,6 @@ In order to use "unsafe" Greatsword V2 links you must put your pointer in the mi
 # Links:
 Discord: https://discord.gg/BMxe6D9CKv
 
-
 ![Discord](http://invidget.switchblade.xyz/BMxe6D9CKv)
 
 
