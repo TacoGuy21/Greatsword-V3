@@ -43,16 +43,6 @@ Cosmosthedev - Provider of an eaglercraft client folder
 <br>
 I1aw - Provider of Gfiles
 
-# Showcase 
-
-
-
-![image](https://github.com/Tacogamerman/Greatsword-V2/assets/119009502/33d2adbe-f803-451b-956c-aebb2a29d9a4)
-
-
-
-
-
 
 
 
