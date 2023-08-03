@@ -1,6 +1,6 @@
 ![JustAImage](https://user-images.githubusercontent.com/119009502/233846585-d725d79c-6e1a-4b29-b2be-3f247ed6d9e5.png)
 
-<img width="957" alt="image" src="https://github.com/JustTacoJohn/Greatsword-V2/assets/119009502/3faefa82-f2bb-46d5-80b9-9abeebb15140">
+<img width="400" alt="image" src="https://github.com/JustTacoJohn/Greatsword-V2/assets/119009502/3faefa82-f2bb-46d5-80b9-9abeebb15140">
 
 This says 97% html because of the gfiles Lmao
 
