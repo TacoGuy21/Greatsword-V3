@@ -1,4 +1,4 @@
-# Greatsword V3
+# **Greatsword V3**
 -------
 
 <img width="960" alt="image" src="https://github.com/JustTacoJohn/Greatsword/assets/119009502/f0e1b322-9432-49bf-921f-231c2cfecbc9">
