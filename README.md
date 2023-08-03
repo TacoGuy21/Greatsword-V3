@@ -1,8 +1,7 @@
-![JustAImage](https://user-images.githubusercontent.com/119009502/233846585-d725d79c-6e1a-4b29-b2be-3f247ed6d9e5.png)
-
+# Greatsword V3
 -------
 
-<img width="800" alt="image" src="https://github.com/JustTacoJohn/Greatsword-V2/assets/119009502/3faefa82-f2bb-46d5-80b9-9abeebb15140">
+<img width="960" alt="image" src="https://github.com/JustTacoJohn/Greatsword/assets/119009502/f0e1b322-9432-49bf-921f-231c2cfecbc9">
 
 -------
 
@@ -15,7 +14,7 @@ The official link ***is*** going to be slow
 # What is Greatsword?
 A stupid project made by a dumb kid in middle school.
 <br>
-This is the sequel to GreatSword v1 (deleted). Greatsword was an unblocker I made, but it had very outdated scripts compared to new tech. 
+This is the sequel to GreatSword v2. Greatsword was an unblocker I made, but it had very outdated scripts and styles compared to new tech. 
 <br>
 I made this repo to hopefully modernize Greatsword, and keep its feel.
 <br>
