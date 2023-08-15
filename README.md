@@ -2,7 +2,9 @@
 -------
 
 <img width="960" alt="image" src="https://github.com/JustTacoJohn/Greatsword/assets/119009502/f0e1b322-9432-49bf-921f-231c2cfecbc9">
-------
+
+-------
+
 <img width="960" alt="image" src="https://github.com/JustTacoJohn/Greatsword-V3/assets/119009502/26cbe91f-a5f6-4d71-86d9-0ecc3c5d81d0">
 
 
