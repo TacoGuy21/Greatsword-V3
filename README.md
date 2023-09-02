@@ -5,7 +5,7 @@
 
 -------
 
-<img width="960" alt="image" src="https://github.com/JustTacoJohn/Greatsword-V3/assets/119009502/26cbe91f-a5f6-4d71-86d9-0ecc3c5d81d0">
+<img width="960" alt="image" src="https://github.com/Tacogamerman/Greatsword-V3/assets/119009502/1dceac26-624c-4c82-be50-32d1097513c0">
 
 
 -------
