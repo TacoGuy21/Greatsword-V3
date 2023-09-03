@@ -1,7 +1,7 @@
 # **Greatsword V3**
 -------
 
-<img width="960" alt="image" src="https://github.com/Tacogamerman/Greatsword-V3/assets/119009502/d694509f-4daa-458b-a433-0da607c9530a">
+<img width="960" alt="image" src="https://github.com/Tacogamerman/Greatsword-V3/assets/119009502/01163600-0224-4aaa-9f7f-4d2488d8a025">
 
 -------
 
