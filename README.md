@@ -26,7 +26,7 @@ I made this repo to hopefully modernize Greatsword, and keep its feel.
 Please star if you enjoy, it helps this repo grow.
 
 # Important
-In order to use "unsafe" Greatsword V2 links you must put your pointer in the middle of the "deceptive site" screen, and type "thisisunsafe". This may redirect you to a new tab, or something else. You may have to go back to the same site and repeat this process up to 10 times. Eventually it will become usable.
+In order to use "unsafe" Greatsword V3 links you must put your pointer in the middle of the "deceptive site" screen, and type "thisisunsafe". This may redirect you to a new tab, or something else. You may have to go back to the same site and repeat this process up to 10 times. Eventually it will become usable.
 
 # Current bugs:
 * Chrome safe browsing may falsely flag links.
