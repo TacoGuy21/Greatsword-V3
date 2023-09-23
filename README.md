@@ -1,6 +1,6 @@
 # **Greatsword V3**
 
-[Greatsword Discord](https://discord.gg/BMxe6D9CKv)
+[Official Discord Server](https://discord.gg/BMxe6D9CKv)
 
 -------
 
