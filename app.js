@@ -18,7 +18,7 @@ const proxy = new Corrosion({
     forceHttps: true,
     requestMiddleware: [
         Corrosion.middleware.blacklist([
-            "accounts.google.com",
+            "useast2-www.securly.com",
         ], "Page is blocked"),
     ]
 });
