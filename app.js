@@ -14,7 +14,7 @@ const Corrosion = require("./lib/server")
 const proxy = new Corrosion({
     prefix: config.prefix,
     codec: config.codec,
-    title: "Greatsword V2",
+    title: "DM Unbl0cker",
     forceHttps: true,
     requestMiddleware: [
         Corrosion.middleware.blacklist([
@@ -53,5 +53,5 @@ app.use(function (req, res) {
 })
 
 app.listen(port, () => {
-    console.log(`Greatsword V2 is running at localhost:${port}`)
+    console.log(`DM Unbl0cker is running at localhost:${port}`)
 })
