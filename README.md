@@ -8,7 +8,7 @@
 
 -------
 
-<img width="960" alt="image" src="https://github.com/Tacogamerman/Greatsword-V3/assets/119009502/1dceac26-624c-4c82-be50-32d1097513c0">
+<img width="952" alt="image" src="https://github.com/Tacogamerman/Greatsword-V3/assets/119009502/a599bcec-5c58-41fe-a2e7-4235039b2ac7">
 
 
 -------
