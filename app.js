@@ -53,5 +53,5 @@ app.use(function (req, res) {
 })
 
 app.listen(port, () => {
-    console.log(`DM Unbl0cker is running at localhost:${port}`)
+    console.log(`Greatsword V3 is running at localhost:${port}`)
 })
