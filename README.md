@@ -1,8 +1,9 @@
 # **Greatsword V3**
 
+[Official Greatsword Link](https://sword.msg.boats/)
+
 [Official Discord Server](https://discord.gg/BMxe6D9CKv)
 
-[Official Greatsword Link](https://sword.msg.boats/)
 -------
 
 <img width="960" alt="image" src="https://github.com/Tacogamerman/Greatsword-V3/assets/119009502/73c7f8f1-1994-4ae6-8b4c-51e2b798222a">
