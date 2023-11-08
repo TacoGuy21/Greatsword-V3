@@ -1,6 +1,6 @@
 # **Greatsword V3**
 
-[Official Greatsword Link](https://sword.msg.boats/)
+[Official Site Link](https://sword.msg.boats/)
 
 [Official Discord Server](https://discord.gg/BMxe6D9CKv)
 
