@@ -1,5 +1,7 @@
 # **Greatsword V3**
 
+***Use [This](https://github.com/tacogamerman/dorians-games) if you want over 50 games!***
+
 [Official Site Link](https://sword.msg.boats/)
 
 [Official Discord Server](https://discord.gg/BMxe6D9CKv)
