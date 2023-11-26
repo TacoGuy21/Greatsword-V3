@@ -4,7 +4,7 @@
 
 [Official Site Link](https://sword.msg.boats/)
 
-[Subreddit](https://www.reddit.com/r/swordstuff/)
+[The Subreddit](https://www.reddit.com/r/swordstuff/)
 
 [Discord Server](https://discord.gg/BMxe6D9CKv)
 
