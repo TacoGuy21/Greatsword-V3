@@ -12,7 +12,7 @@
 
 -------
 
-<img width="952" alt="image" src="https://github.com/Tacogamerman/Greatsword-V3/assets/119009502/a599bcec-5c58-41fe-a2e7-4235039b2ac7">
+<img width="960" alt="image" src="https://github.com/Tacogamerman/Greatsword-V3/assets/119009502/bfb5301a-12c5-4446-86f3-515749599102">
 
 
 -------
