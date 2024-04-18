@@ -1,4 +1,19 @@
 <title>Greatsword V3</title>
+ <script>
+        var secretCode = '';
+        var expectedCode = 'upupdowndownleftrightleftrightbastart';
+
+        function checkSecret(event) {
+            var char = String.fromCharCode(event.keyCode || event.which);
+            secretCode += char;
+            if (secretCode === expectedCode) {
+                window.location.href = "questionmark.html";
+                secretCode = '';
+            }
+        }
+
+        document.addEventListener('keypress', checkSecret);
+    </script>
 <style>
     ::-webkit-scrollbar {
         display: none;
