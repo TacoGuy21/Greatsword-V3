@@ -8,6 +8,9 @@
 
 -------
 
+## Link Tutorials:
+CSB Method: https://youtu.be/ZS109DCg8SM (Made by 5k_explorer on Discord)
+Render Method: https://www.youtube.com/watch?v=hysvVkzfHlo
 <img width="960" alt="image" src="https://github.com/Tacogamerman/Greatsword-V3/assets/119009502/73c7f8f1-1994-4ae6-8b4c-51e2b798222a">
 
 -------
