@@ -1,10 +1,6 @@
 # **Greatsword V3**
 
-[Demo Link](https://jhgfkhgyg.onrender.com/) (Not working anymore because I got banned)
-
-[The Subreddit](https://www.reddit.com/r/swordstuff/)
-
-[Discord Server](https://discord.gg/BMxe6D9CKv)
+[Discord Server](https://discord.gg/fysNqZY9yn)
 
 -------
 
