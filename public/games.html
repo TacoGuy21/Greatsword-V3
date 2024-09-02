@@ -52,43 +52,99 @@
       }
       
       .navbar {
-        background-color: #333;
-        padding: 10px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-        border-top: 2px solid #000;
-        border-bottom: 2px solid #000;
-      }
-  
-      .navbar ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-      }
-  
-      .navbar ul li {
-        display: inline;
-      }
-  
-      .navbar ul li a {
-        color: #fff;
-        text-decoration: none;
-        padding: 10px;
-        font-family: Arial, sans-serif;
-        font-size: 18px;
-        opacity: 0.7;
-        transition: opacity 0.3s ease;
-      }
-  
-      .navbar ul li a:hover {
-        background-color: #555;
-        opacity: 1;
-      }
-  
+    width: 250px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #333;
+    border-right: 3px solid transparent;
+    transition: border-right 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 60% 40%, 
+        rgba(255, 255, 255, 0.2) 10%, 
+        rgba(0, 0, 0, 0.8) 40%, 
+        rgba(0, 0, 0, 1) 80%);
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.navbar:hover {
+    border-right: 3px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.navbar ul li {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.navbar ul li a {
+    color: white;
+    background-color: #444;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns arrow to the far right */
+    position: relative;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 2;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.navbar ul li a:active {
+    background-color: #666;
+    transform: scale(1);
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid white;
+    transition: transform 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+    transform: translateX(5px); /* Moves the arrow to the right on hover */
+}
 
       .content {
         margin-top: 50px; 
@@ -108,11 +164,6 @@
     <div class="navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="games.html">Games</a></li>
-        <li><a href="chat.html">Chat</a></li>
-        <li><a href="https://discord.gg/BMxe6D9CKv">Discord</a></li>
-        <li><a href="https://github.com/Tacogamerman/Greatsword-Unblocker-V2">GitHub</a></li>
-        <li class="navbar-brand">Greatsword Services</li>
-          
+        <li><a href="games.html">Games</a></li>    
       </ul>
     </div>
