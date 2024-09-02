@@ -1,9 +1,3 @@
-/*
-Copyright © Fog Network
-Made by Nebelung
-MIT license: https://opensource.org/licenses/MIT
-*/
-
 const express = require("express")
 const app = express()
 const fetch = require("node-fetch")
