@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Gameweb V1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 0 0 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <label for="pin">Enter your PIN:</label>
+        <input type="text" id="pin" placeholder="PIN" maxlength="4">
+        <button onclick="loginWithPin()">Login with PIN</button>
+        <button onclick="loginAsBasic()">Login as Basic</button>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script>
+        // Function to handle login with PIN
+        function loginWithPin() {
+            const pinInput = document.getElementById('pin').value;
+            const messageDiv = document.getElementById('message');
+
+            // Simple PIN validation for demonstration purposes
+            const validPins = {
+                'paid': '2345',
+                'beta': '3456',
+                'developer': '4567'
+            };
+
+            let userMode = '';
+            for (const mode in validPins) {
+                if (pinInput === validPins[mode]) {
+                    userMode = mode;
+                    break;
+                }
+            }
+
+            if (userMode) {
+                localStorage.setItem('userMode', userMode);
+                window.location.href = 'index.html'; // Redirect to the main page
+            } else {
+                messageDiv.textContent = 'Invalid PIN. Please try again.';
+            }
+        }
+
+        // Function to handle login as Basic mode
+        function loginAsBasic() {
+            localStorage.setItem('userMode', 'basic');
+            window.location.href = 'index.html'; // Redirect to the main page
+        }
+    </script>
+</body>
+</html>
