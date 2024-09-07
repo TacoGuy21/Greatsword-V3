@@ -36,7 +36,7 @@
         justify-content: space-around;
     }
 </style>
-<button onclick="openBlankWithIframe('https://ultravioletgameweb.koyeb.app/')">Open Ultraviolet in new tab</button>
+<button onclick="openBlankWithIframe('https://ultravioletgameweb.koyeb.app/')">Open Bee Movie Minecraft Noob</button>
 <script>
     function openBlankWithIframe(url) {
             // Open about:blank in a new window
@@ -209,3 +209,16 @@
         <!--<li><a href="games.html">Games</a></li>-->   
       </ul>
     </div>
+<!-- check-login.js -->
+<script>
+   (function() {
+    // Check if userMode is set in local storage
+    const userMode = localStorage.getItem('userMode');
+    
+    // If userMode is not found, redirect to login page
+    if (!userMode) {
+        window.location.href = 'Pinsystem.html';
+    }
+})();
+
+</script>
