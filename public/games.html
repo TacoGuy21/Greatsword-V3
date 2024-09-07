@@ -36,12 +36,7 @@
         justify-content: space-around;
     }
 </style>
-<button onclick="window.location.href='/chroma.html'">The Chroma Incident</button>
-<button onclick="window.location.href='/chromedino.html'">Chrome Dino</button>
-<button onclick="window.location.href='/Evilglitch.html'">Evil Glitch</button>
-<button onclick="window.location.href='/Square.html'">Black Hole Square</button>
-<button onclick="window.location.href='/RetroHaunt.html'">Retrohaunt</button>
-<button onclick="window.location.href='/Konekt.html'">Konekt</button>
+<a onclick="">test</a>
 
 <head>
     <style>
@@ -167,3 +162,16 @@
         <li><a href="games.html">Games</a></li>    
       </ul>
     </div>
+<!-- check-login.js -->
+<script>
+   (function() {
+    // Check if userMode is set in local storage
+    const userMode = localStorage.getItem('userMode');
+    
+    // If userMode is not found, redirect to login page
+    if (!userMode) {
+        window.location.href = 'Pinsystem.html';
+    }
+})();
+
+</script>
