@@ -347,6 +347,102 @@ document.addEventListener("keypress", function onEvent(event) {
             function blank(){
               (function () {var url = document.URL; var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement("iframe"); iframe.style.border = "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe); var script = win.document.createElement("script"); script.src = ""; win.document.body.appendChild(script); })();
             }
+            document.addEventListener('DOMContentLoaded', function() {
+    const userMode = localStorage.getItem('userMode') || 'default';
+
+    // Apply settings based on the user's mode
+    if (userMode === 'advanced') {
+        // Load advanced mode settings
+        applyAdvancedMode();
+    } else if (userMode === 'basic') {
+        // Load basic mode settings
+        applyBasicMode();
+    } else {
+        // Default settings
+        applyDefaultMode();
+    }
+});
+
+function applyAdvancedMode() {
+    // Example settings for advanced mode
+    document.body.style.backgroundColor = '#333'; // Dark background for advanced mode
+    // Additional advanced mode settings can be added here
+}
+
+function applyBasicMode() {
+    // Example settings for basic mode
+    document.body.style.backgroundColor = '#fff'; // Light background for basic mode
+    // Additional basic mode settings can be added here
+}
+
+function applyDefaultMode() {
+    // Example settings for default mode
+    document.body.style.backgroundColor = '#f5f5f5'; // Light grey background for default mode
+    // Additional default settings can be added here
+}
             </script>
+             <script>
+              function blank() {
+                  (function () {
+                      var url = document.URL;
+                      var urlObj = new window.URL(window.location.href);
+                      var win = window.open();
+                      win.document.body.style.margin = "0";
+                      win.document.body.style.height = "100vh";
+                      var iframe = win.document.createElement("iframe");
+                      iframe.style.border = "none";
+                      iframe.style.width = "100%";
+                      iframe.style.height = "100%";
+                      iframe.style.margin = "0";
+                      iframe.referrerpolicy = "no-referrer";
+                      iframe.allow = "fullscreen";
+                      iframe.src = url.toString();
+                      win.document.body.appendChild(iframe);
+                      var script = win.document.createElement("script");
+                      script.src = "";
+                      win.document.body.appendChild(script);
+                  })();
+              }
+      
+              document.addEventListener('DOMContentLoaded', function () {
+                  const userMode = localStorage.getItem('userMode') || 'basic'; // Default to 'basic' mode if not set
+      
+                  // Function to set visibility based on user mode
+                  function setNavBarVisibility() {
+                      const navItems = document.querySelectorAll('.navbar ul li');
+                      navItems.forEach(item => item.style.display = 'none'); // Hide all items by default
+      
+                      if (userMode === 'developer') {
+                          // Show all items for developer
+                          navItems.forEach(item => item.style.display = 'block');
+                      } else if (userMode === 'beta') {
+                          // Show home, main hub, and ultraviolet for beta tester
+                          navItems[0].style.display = 'block'; // Home
+                          navItems[1].style.display = 'block'; // Main Hub
+                          navItems[2].style.display = 'block'; // Ultraviolet
+                      } else if (userMode === 'paid') {
+                          // Show home and main hub for paid user
+                          navItems[0].style.display = 'block'; // Home
+                          navItems[1].style.display = 'block'; // Main Hub
+                      } else if (userMode === 'basic') {
+                          // Show only home for basic user
+                          navItems[0].style.display = 'block'; // Home
+                      }
+                  }
+      
+                  setNavBarVisibility(); // Apply visibility settings
+              });
+
+              (function() {
+    // Check if userMode is set in local storage
+    const userMode = localStorage.getItem('userMode');
+    
+    // If userMode is not found, redirect to login page
+    if (!userMode) {
+        window.location.href = 'Pinsystem.html';
+    }
+})();
+
+          </script>
             <button onclick="blank();">Open in about:blank</button>
       </div>
