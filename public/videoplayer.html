@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Iframe with UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Dropdown menu */
+        #navMenu {
+            position: absolute;
+            top: -50px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            transition: top 0.3s;
+            z-index: 10;
+        }
+
+        #navMenu ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        #navMenu ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        #navMenu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            z-index: 20;
+        }
+
+        #popup h2 {
+            margin-bottom: 20px;
+        }
+
+        #popup label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        #popup button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #popup button:hover {
+            background-color: #218838;
+        }
+
+        /* Hide popup initially */
+        #popup.hidden {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Popup UI -->
+<div id="popup">
+    <h2>Welcome!</h2>
+    <p>This is a fullscreen iframe page. Would you like to continue?</p>
+    <label>
+        <input type="checkbox" id="doNotShow"> Do not show this message again
+    </label>
+    <button onclick="closePopup()">OK</button>
+</div>
+
+<!-- Navigation Dropdown -->
+<div id="navMenu">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>
+
+<!-- Iframe filling the entire screen -->
+<iframe src="https://inv.tux.pizza/feed/popular"></iframe>
+
+<script>
+    // Show popup if not already dismissed
+    window.onload = function() {
+        if (!localStorage.getItem('popupDismissed')) {
+            document.getElementById('popup').classList.remove('hidden');
+        }
+    };
+
+    // Close popup and save "Do not show again" preference to localStorage
+    function closePopup() {
+        if (document.getElementById('doNotShow').checked) {
+            localStorage.setItem('popupDismissed', 'true');
+        }
+        document.getElementById('popup').classList.add('hidden');
+    }
+
+    // Dropdown menu functionality
+    document.addEventListener('mousemove', function(event) {
+        const navMenu = document.getElementById('navMenu');
+        if (event.clientY < 50) {
+            navMenu.style.top = '0';
+        } else {
+            navMenu.style.top = '-50px';
+        }
+    });
+</script>
+
+</body>
+</html>

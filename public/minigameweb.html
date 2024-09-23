@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini gameweb</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    .iframe-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .top-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background-color: #222;
+      color: white;
+      display: none;
+      align-items: center;
+      padding: 0 10px;
+      z-index: 999;
+    }
+    .top-bar input {
+      margin: 0 5px;
+      padding: 5px;
+      font-size: 14px;
+    }
+    .top-bar button {
+      padding: 5px 10px;
+      margin-left: 5px;
+      cursor: pointer;
+      background-color: #444;
+      color: white;
+      border: none;
+    }
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin-right: 10px;
+      display: inline-block;
+    }
+    .top-bar a:hover {
+      background-color: #575757;
+    }
+    .iframe-container:hover .top-bar {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+<div class="iframe-container">
+  <div class="top-bar">
+    <!-- Navigation buttons -->
+    <a href="index.html">Home</a>
+    <a href="Mainhub.html">Mainhub</a>
+    <a href="interstellar.html">Interstellar</a>
+
+    <!-- Iframe control -->
+    <label for="iframeSrc">Iframe URL:</label>
+    <input type="text" id="iframeSrc" placeholder="Enter URL">
+    <button onclick="changeIframeSrc()">Change Src</button>
+
+    <!-- FPS control -->
+    <label for="fpsInput">FPS:</label>
+    <input type="number" id="fpsInput" min="1" max="360" placeholder="FPS">
+    <button onclick="changeFPS()">Set FPS</button>
+
+    <!-- Fullscreen button -->
+    <button onclick="toggleIframeFullScreen()">Fullscreen</button>
+  </div>
+
+  <iframe id="iframeContent" src=""></iframe>
+</div>
+
+<script>
+  function changeIframeSrc() {
+    const iframe = document.getElementById('iframeContent');
+    const newSrc = document.getElementById('iframeSrc').value;
+    if (newSrc) {
+      iframe.src = newSrc.startsWith('http') ? newSrc : `https://${newSrc}`;
+    }
+  }
+
+  function toggleIframeFullScreen() {
+    const iframe = document.getElementById('iframeContent');
+    if (iframe.requestFullscreen) {
+      iframe.requestFullscreen();
+    } else if (iframe.mozRequestFullScreen) { /* Firefox */
+      iframe.mozRequestFullScreen();
+    } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+      iframe.webkitRequestFullscreen();
+    } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+      iframe.msRequestFullscreen();
+    }
+  }
+
+  function changeFPS() {
+    const fpsInput = document.getElementById('fpsInput').value;
+    let fps = parseInt(fpsInput);
+    if (fps && fps >= 1 && fps <= 360) {
+      alert(`FPS set to: ${fps}`);
+      // Placeholder to simulate FPS change
+    } else {
+      alert("Please enter a valid FPS value (1-360)");
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create PIN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .success {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Create PIN for Your Computer ID</h2>
+    <form id="pinForm">
+        <label for="computerId">Computer ID:</label>
+        <input type="text" id="computerId" readonly>
+
+        <label for="pin">Enter a 4-digit PIN:</label>
+        <input type="password" id="pin" maxlength="4" placeholder="Enter 4-digit PIN" required>
+
+        <button type="submit">Save PIN</button>
+    </form>
+
+    <div id="message" class="message" style="display:none;"></div>
+</div>
+
+<script>
+// Function to generate a unique Computer ID (simplified)
+function generateComputerId() {
+    let computerId = localStorage.getItem('computerId');
+    
+    // If the computer ID is already saved, return it
+    if (computerId) {
+        return computerId;
+    }
+    
+    // Otherwise, generate a new one and save it
+    computerId = 'COMP-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+    localStorage.setItem('computerId', computerId);
+    return computerId;
+}
+
+// Automatically assign user to basic mode
+function assignBasicMode() {
+    localStorage.setItem('userMode', 'basic');
+}
+
+// Save PIN and Computer ID in localStorage
+function savePin(pin) {
+    const computerId = generateComputerId();
+    localStorage.setItem('computerId', computerId);
+    localStorage.setItem('userPin', pin);
+
+    // Assign basic mode automatically
+    assignBasicMode();
+}
+
+// Display computer ID in the input field
+document.getElementById('computerId').value = generateComputerId();
+
+// Handle form submission
+document.getElementById('pinForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const pin = document.getElementById('pin').value;
+    const message = document.getElementById('message');
+
+    // Simple validation for 4-digit PIN
+    if (pin.length === 4 && /^[0-9]+$/.test(pin)) {
+        savePin(pin);
+        message.style.display = 'block';
+        message.textContent = 'Your PIN has been saved! Redirecting to login...';
+        message.className = 'message success';
+        
+        // Redirect to login page after a short delay
+        setTimeout(function() {
+            window.location.href = 'loginsystem.html';
+        }, 2000); // 2 second delay before redirecting
+    } else {
+        message.style.display = 'block';
+        message.textContent = 'Please enter a valid 4-digit PIN.';
+        message.className = 'message error';
+    }
+});
+</script>
+
+</body>
+</html>

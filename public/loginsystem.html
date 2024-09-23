@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with PIN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .success {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
+        }
+        .link-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .link-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Log in with your PIN</h2>
+    <form id="loginForm">
+        <label for="computerId">Computer ID:</label>
+        <input type="text" id="computerId" readonly>
+
+        <label for="pin">Enter your PIN:</label>
+        <input type="password" id="pin" maxlength="4" placeholder="Enter 4-digit PIN" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <div id="message" class="message" style="display:none;"></div>
+
+    <!-- Button to go to Save PIN page -->
+    <a href="pinsystem.html" class="link-button">Create/Reset PIN</a>
+</div>
+
+<script>
+// Function to get stored Computer ID from localStorage
+function getStoredComputerId() {
+    return localStorage.getItem('computerId');
+}
+
+// Function to get stored PIN from localStorage
+function getStoredPin() {
+    return localStorage.getItem('userPin');
+}
+
+// Function to get the current user's mode
+function getUserMode() {
+    return localStorage.getItem('userMode');
+}
+
+// Display the stored computer ID in the input field
+const storedComputerId = getStoredComputerId();
+document.getElementById('computerId').value = storedComputerId ? storedComputerId : 'No Computer ID found.';
+
+// Handle form submission
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const enteredPin = document.getElementById('pin').value;
+    const message = document.getElementById('message');
+    const storedPin = getStoredPin();
+    const userMode = getUserMode();
+
+    // Verify that the entered PIN matches the stored PIN
+    if (enteredPin === storedPin) {
+        message.style.display = 'block';
+        message.textContent = 'Login successful! You are in ' + userMode + ' mode.';
+        message.className = 'message success';
+        window.location.href = 'index.html';
+
+        // Redirect or provide access to other parts of the site here
+        // window.location.href = '/dashboard.html'; (For example, redirect to a dashboard)
+    } else {
+        message.style.display = 'block';
+        message.textContent = 'Invalid PIN. Please try again.';
+        message.className = 'message error';
+    }
+});
+</script>
+
+</body>
+</html>

@@ -109,9 +109,20 @@
      </style>
  </head>
  <body>
-     <div class="enlarged-text">
-      <h1>Gameweb</h1>
-     </div>
+        <button onclick="openBlankPage()">Open Interstellar</button>
+    
+        <script>
+            function openBlankPage() {
+                // Open about:blank page
+                const newWindow = window.open("about:blank", "_blank");
+                
+                // Set the content of the new window to the desired URL
+                newWindow.location.href = "https://freeti-84calculatoronline.koyeb.app/";
+            }
+        </script>
+    </body>
+    </html>
+    
 <style>
    body {
      background-color: #171717;
@@ -201,39 +212,6 @@
 </style>
 </head>
 <body>
-
-<!-- Overlay -->
-<div id="overlay"></div>
-
-<!-- Update Log UI -->
-<div id="update-log">
-    <h2>Update Log</h2>
-    <div id="update-log-columns">
-        <div class="column">
-            <h3>Basic</h3>
-            <ul>
-                
-            </ul>
-        </div>
-        <hr class="hr-separator">
-        <div class="column">
-            <h3>Paid</h3>
-            <ul>
-                
-            </ul>
-        </div>
-        <hr class="hr-separator">
-        <div class="column">
-            <h3>Beta Testers</h3>
-            <ul>
-                
-            </ul>
-        </div>
-    </div>
-    <button id="close-log">Close</button>
-</div>
-<!-- Button to Manually Show Update Log -->
-<button id="show-log">Show Update Log</button>
 
 <script>
     // Function to get today's date in 'YYYY-MM-DD' format
@@ -521,117 +499,6 @@ document.addEventListener("keypress", function onEvent(event) {
         <!-- <li><a href="games.html">Games</a></li> -->
       </ul>
     </div>
-    <div id="developerboard">
-    <h1>User Management</h1>
-    <select id="userSelect"></select>
-    <div>
-        <label for="computerId">Computer ID:</label>
-        <input type="text" id="computerId">
-    </div>
-    <div>
-        <label for="userMode">User Mode:</label>
-        <input type="text" id="userMode">
-    </div>
-    <div>
-        <label for="userPin">User PIN:</label>
-        <input type="text" id="userPin">
-    </div>
-    <button id="saveButton">Save</button>
-    </div>
-    <script>
-        let db;
-
-        // Open IndexedDB
-        const request = indexedDB.open('UserDatabase', 1);
-        request.onupgradeneeded = (event) => {
-            db = event.target.result;
-            db.createObjectStore('users', { keyPath: 'username' });
-        };
-
-        request.onsuccess = (event) => {
-            db = event.target.result;
-            loadUsers();
-        };
-
-        function loadUsers() {
-            const transaction = db.transaction('users', 'readonly');
-            const store = transaction.objectStore('users');
-            const request = store.getAll();
-
-            request.onsuccess = () => {
-                const users = request.result;
-                const userSelect = document.getElementById('userSelect');
-
-                // Clear existing options
-                userSelect.innerHTML = '';
-
-                users.forEach(user => {
-                    const option = document.createElement('option');
-                    option.value = user.username;
-                    option.textContent = user.username;
-                    userSelect.appendChild(option);
-                });
-            };
-        }
-
-        document.getElementById('userSelect').addEventListener('change', function() {
-            const selectedUser = this.value;
-            const transaction = db.transaction('users', 'readonly');
-            const store = transaction.objectStore('users');
-            const request = store.get(selectedUser);
-
-            request.onsuccess = () => {
-                const userData = request.result;
-                if (userData) {
-                    document.getElementById('computerId').value = userData.computerId || '';
-                    document.getElementById('userMode').value = userData.userMode || '';
-                    document.getElementById('userPin').value = userData.userPin || '';
-
-                    // Update local storage as well
-                    localStorage.setItem('currentUser', JSON.stringify(userData));
-                }
-            };
-        });
-
-        document.getElementById('saveButton').addEventListener('click', () => {
-            const selectedUser = document.getElementById('userSelect').value;
-            const transaction = db.transaction('users', 'readwrite');
-            const store = transaction.objectStore('users');
-
-            const updatedUser = {
-                username: selectedUser,
-                computerId: document.getElementById('computerId').value,
-                userMode: document.getElementById('userMode').value,
-                userPin: document.getElementById('userPin').value,
-            };
-
-            store.put(updatedUser);
-
-            // Also update local storage
-            localStorage.setItem('currentUser', JSON.stringify(updatedUser));
-            alert('User data updated successfully!');
-
-            // Reload users to refresh dropdown if needed
-            loadUsers();
-        });
-    </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .user {
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
-<body>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        textarea { width: 100%; height: 100px; margin-top: 10px; }
-    </style>
-</head>
-<body>
     <style>
         .button-container {
           position: fixed;
@@ -720,50 +587,36 @@ function applyDefaultMode() {
               }
       
               document.addEventListener('DOMContentLoaded', function () {
-    const userMode = localStorage.getItem('userMode') || 'basic'; // Default to 'basic' mode if not set
+                  const userMode = localStorage.getItem('userMode') || 'basic'; // Default to 'basic' mode if not set
+      
+                  // Function to set visibility based on user mode
+                  function setNavBarVisibility() {
+                      const navItems = document.querySelectorAll('.navbar ul li');
+                      navItems.forEach(item => item.style.display = 'none'); // Hide all items by default
+      
+                      if (userMode === 'developer') {
+                          // Show all items for developer
+                          navItems.forEach(item => item.style.display = 'block');
+                      } else if (userMode === 'beta') {
+                          // Show home, main hub, and ultraviolet for beta tester
+                          navItems[0].style.display = 'block'; // Home
+                          navItems[1].style.display = 'block'; // Main Hub
+                          navItems[2].style.display = 'block'; // Ultraviolet
+                      } else if (userMode === 'paid') {
+                          // Show home and main hub for paid user
+                          navItems[0].style.display = 'block'; // Home
+                          navItems[1].style.display = 'block'; // Main Hub
+                      } else if (userMode === 'basic') {
+                          // Show only home for basic user
+                          navItems[0].style.display = 'block'; // Home
+                      }
+                  }
+      
+                  setNavBarVisibility(); // Apply visibility settings
+              });
 
-    // Function to set visibility based on user mode
-    function setNavBarVisibility() {
-        const navItems = document.querySelectorAll('.navbar ul li');
-        navItems.forEach(item => item.style.display = 'none'); // Hide all items by default
-
-        if (userMode === 'developer') {
-            // Show all items for developer
-            navItems.forEach(item => item.style.display = 'block');
-            document.getElementById('developerboard').style.display = 'block'; // Show developer board
-        } else if (userMode === 'beta') {
-            // Show home, main hub, and ultraviolet for beta tester
-            navItems[0].style.display = 'block'; // Home
-            navItems[1].style.display = 'block'; // Main Hub
-            navItems[2].style.display = 'block'; // Ultraviolet
-            document.getElementById('developerboard').style.display = 'none'; // Hide developer board
-        } else if (userMode === 'paid') {
-            // Show home and main hub for paid user
-            navItems[0].style.display = 'block'; // Home
-            navItems[1].style.display = 'block'; // Main Hub
-            document.getElementById('developerboard').style.display = 'none'; // Hide developer board
-        } else if (userMode === 'basic') {
-            // Show only home for basic user
-            navItems[0].style.display = 'block'; // Home
-            document.getElementById('developerboard').style.display = 'none'; // Hide developer board
-        }
-    }
-
-    setNavBarVisibility(); // Apply visibility settings
-});           
 ();
 
           </script>
-          <script>
-function checkUserPin() {
-    const userPin = localStorage.getItem('userPin');
 
-    if (!userPin) {
-        window.location.href = 'pinsystem.html';
-    }
-}
-
-document.addEventListener('DOMContentLoaded', checkUserPin);
-          </script>
-            <button onclick="blank();">Open in about:blank</button>
       </div>
