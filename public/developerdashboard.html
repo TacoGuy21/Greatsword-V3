@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Developer Dashboard</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Computer ID</th>
+            <th>PIN</th>
+            <th>Developer Status</th>
+        </tr>
+    </thead>
+    <tbody id="userTableBody">
+        <!-- User data will be populated here -->
+    </tbody>
+</table>
+
+<script>
+    async function openDatabase() {
+        return new Promise((resolve, reject) => {
+            const request = indexedDB.open('UserDatabase', 1);
+
+            request.onsuccess = function(event) {
+                resolve(event.target.result);
+            };
+
+            request.onerror = function(event) {
+                reject(event);
+            };
+        });
+    }
+
+    async function loadUsers() {
+        const db = await openDatabase();
+        const transaction = db.transaction(['users', 'computers'], 'readonly');
+        const userStore = transaction.objectStore('users');
+        const computerStore = transaction.objectStore('computers');
+
+        const userRequest = userStore.getAll();
+        const computerRequest = computerStore.getAll();
+
+        userRequest.onsuccess = function(event) {
+            const users = event.target.result;
+            computerRequest.onsuccess = function(event) {
+                const computers = event.target.result;
+                const userTableBody = document.getElementById('userTableBody');
+
+                users.forEach(user => {
+                    const computer = computers.find(comp => comp.computerID === user.computerID);
+                    const developerStatus = computer && computer.isDeveloper ? 'Developer' : 'Basic';
+
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td>${user.computerID}</td><td>${user.pin}</td><td>${developerStatus}</td>`;
+                    userTableBody.appendChild(row);
+                });
+            };
+        };
+    }
+
+    // Load users on page load
+    loadUsers();
+</script>
+
+</body>
+</html>
