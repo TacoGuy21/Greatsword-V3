@@ -3,132 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login with PIN</title>
+    <title>Login</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #container {
+            background-color: white;
             padding: 20px;
-        }
-        .form-container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-        }
-        input[type="text"], input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            box-sizing: border-box;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        .message {
-            margin-top: 15px;
-            padding: 10px;
-            border-radius: 8px;
-        }
-        .success {
-            background-color: #dff0d8;
-            color: #3c763d;
-        }
-        .error {
-            background-color: #f2dede;
-            color: #a94442;
-        }
-        .link-button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007BFF;
-            color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-top: 10px;
-            display: inline-block;
-            text-decoration: none;
         }
-        .link-button:hover {
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
             background-color: #0056b3;
+        }
+
+        #status, #computerID {
+            margin-top: 15px;
+            color: green;
+        }
+
+        #navigate {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-<div class="form-container">
-    <h2>Log in with your PIN</h2>
-    <form id="loginForm">
-        <label for="computerId">Computer ID:</label>
-        <input type="text" id="computerId" readonly>
-
-        <label for="pin">Enter your PIN:</label>
-        <input type="password" id="pin" maxlength="4" placeholder="Enter 4-digit PIN" required>
-
-        <button type="submit">Login</button>
-    </form>
-
-    <div id="message" class="message" style="display:none;"></div>
-
-    <!-- Button to go to Save PIN page -->
-    <a href="pinsystem.html" class="link-button">Create/Reset PIN</a>
+<div id="container">
+    <h1>Login</h1>
+    <input type="password" id="pin" placeholder="Enter PIN" maxlength="6" />
+    <button id="login">Login</button>
+    <div id="status"></div>
+    <p id="computerID"></p>
+    <div id="navigate">Don't have a PIN? <a href="pinsystem.html">Sign up here</a></div>
 </div>
 
 <script>
-// Function to get stored Computer ID from localStorage
-function getStoredComputerId() {
-    return localStorage.getItem('computerId');
-}
+    async function openDatabase() {
+        return new Promise((resolve, reject) => {
+            const request = indexedDB.open('UserDatabase', 1);
 
-// Function to get stored PIN from localStorage
-function getStoredPin() {
-    return localStorage.getItem('userPin');
-}
+            request.onsuccess = function(event) {
+                resolve(event.target.result);
+            };
 
-// Function to get the current user's mode
-function getUserMode() {
-    return localStorage.getItem('userMode');
-}
-
-// Display the stored computer ID in the input field
-const storedComputerId = getStoredComputerId();
-document.getElementById('computerId').value = storedComputerId ? storedComputerId : 'No Computer ID found.';
-
-// Handle form submission
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const enteredPin = document.getElementById('pin').value;
-    const message = document.getElementById('message');
-    const storedPin = getStoredPin();
-    const userMode = getUserMode();
-
-    // Verify that the entered PIN matches the stored PIN
-    if (enteredPin === storedPin) {
-        message.style.display = 'block';
-        message.textContent = 'Login successful! You are in ' + userMode + ' mode.';
-        message.className = 'message success';
-        window.location.href = 'index.html';
-
-        // Redirect or provide access to other parts of the site here
-        // window.location.href = '/dashboard.html'; (For example, redirect to a dashboard)
-    } else {
-        message.style.display = 'block';
-        message.textContent = 'Invalid PIN. Please try again.';
-        message.className = 'message error';
+            request.onerror = function(event) {
+                reject(event);
+            };
+        });
     }
-});
+
+    async function getUser(computerID) {
+        const db = await openDatabase();
+        const transaction = db.transaction(['users'], 'readonly');
+        const store = transaction.objectStore('users');
+        const request = store.get(computerID);
+
+        return new Promise((resolve) => {
+            request.onsuccess = function(event) {
+                resolve(event.target.result);
+            };
+        });
+    }
+
+    async function isUserDeveloper(computerID) {
+        const db = await openDatabase();
+        const transaction = db.transaction(['computers'], 'readonly');
+        const store = transaction.objectStore('computers');
+        const request = store.get(computerID);
+
+        return new Promise((resolve) => {
+            request.onsuccess = function(event) {
+                const user = event.target.result;
+                resolve(user ? user.isDeveloper : false);
+            };
+        });
+    }
+
+    async function displayComputerID() {
+        const computerID = await getNextComputerID();
+        document.getElementById('computerID').textContent = `Your Computer ID: ${computerID}`;
+        return computerID;
+    }
+
+    document.getElementById('login').addEventListener('click', async () => {
+        const pin = document.getElementById('pin').value;
+        const statusElement = document.getElementById('status');
+        const computerID = await displayComputerID();
+
+        const user = await getUser(computerID);
+        if (user) {
+            if (user.pin === pin) {
+                statusElement.textContent = 'Login successful!';
+                statusElement.style.color = 'green';
+
+                // Check if the user is a developer
+                const isDeveloper = await isUserDeveloper(computerID);
+                if (isDeveloper) {
+                    // Redirect to developer dashboard or page
+                    window.location.href = 'developer_dashboard.html';
+                } else {
+                    // Redirect to the basic user page
+                    window.location.href = 'basic_user_page.html';
+                }
+            } else {
+                statusElement.textContent = 'Invalid PIN. Please try again.';
+                statusElement.style.color = 'red';
+            }
+        } else {
+            statusElement.textContent = 'User does not exist. Please sign up.';
+            statusElement.style.color = 'red';
+        }
+    });
+
+    // Load computer ID on page load
+    displayComputerID();
 </script>
 
 </body>

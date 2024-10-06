@@ -516,27 +516,11 @@ document.addEventListener("keypress", function onEvent(event) {
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="Mainhub.html">Main Hub</a></li>
-        <li><a href="interstellar.html">Interstellar</a></li>
+        <li><a href="freegameweb.html">Free Gameweb</a></li>
+        <li><a href="paidgameweb.html">Paid Gameweb</a></li>
         <li><a href="minigameweb.html">Mini gameweb</a></li>
         <!-- <li><a href="games.html">Games</a></li> -->
       </ul>
-    </div>
-    <div id="developerboard">
-    <h1>User Management</h1>
-    <select id="userSelect"></select>
-    <div>
-        <label for="computerId">Computer ID:</label>
-        <input type="text" id="computerId">
-    </div>
-    <div>
-        <label for="userMode">User Mode:</label>
-        <input type="text" id="userMode">
-    </div>
-    <div>
-        <label for="userPin">User PIN:</label>
-        <input type="text" id="userPin">
-    </div>
-    <button id="saveButton">Save</button>
     </div>
     <script>
         let db;
@@ -717,53 +701,9 @@ function applyDefaultMode() {
                       script.src = "";
                       win.document.body.appendChild(script);
                   })();
-              }
-      
-              document.addEventListener('DOMContentLoaded', function () {
-    const userMode = localStorage.getItem('userMode') || 'basic'; // Default to 'basic' mode if not set
-
-    // Function to set visibility based on user mode
-    function setNavBarVisibility() {
-        const navItems = document.querySelectorAll('.navbar ul li');
-        navItems.forEach(item => item.style.display = 'none'); // Hide all items by default
-
-        if (userMode === 'developer') {
-            // Show all items for developer
-            navItems.forEach(item => item.style.display = 'block');
-            document.getElementById('developerboard').style.display = 'block'; // Show developer board
-        } else if (userMode === 'beta') {
-            // Show home, main hub, and ultraviolet for beta tester
-            navItems[0].style.display = 'block'; // Home
-            navItems[1].style.display = 'block'; // Main Hub
-            navItems[2].style.display = 'block'; // Ultraviolet
-            document.getElementById('developerboard').style.display = 'none'; // Hide developer board
-        } else if (userMode === 'paid') {
-            // Show home and main hub for paid user
-            navItems[0].style.display = 'block'; // Home
-            navItems[1].style.display = 'block'; // Main Hub
-            document.getElementById('developerboard').style.display = 'none'; // Hide developer board
-        } else if (userMode === 'basic') {
-            // Show only home for basic user
-            navItems[0].style.display = 'block'; // Home
-            document.getElementById('developerboard').style.display = 'none'; // Hide developer board
-        }
-    }
-
-    setNavBarVisibility(); // Apply visibility settings
-});           
+              }          
 ();
 
-          </script>
-          <script>
-function checkUserPin() {
-    const userPin = localStorage.getItem('userPin');
-
-    if (!userPin) {
-        window.location.href = 'pinsystem.html';
-    }
-}
-
-document.addEventListener('DOMContentLoaded', checkUserPin);
           </script>
             <button onclick="blank();">Open in about:blank</button>
       </div>

@@ -3,127 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create PIN</title>
+    <title>Sign Up</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            padding: 20px;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        .form-container {
-            max-width: 400px;
-            margin: 0 auto;
+
+        #container {
+            background-color: white;
             padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        input[type="text"], input[type="password"] {
-            width: 100%;
+
+        input {
             padding: 10px;
-            margin: 10px 0;
-            box-sizing: border-box;
+            margin: 10px;
+            width: 100%;
         }
+
         button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
+            padding: 10px 20px;
+            background-color: #007bff;
             color: white;
             border: none;
-            border-radius: 8px;
             cursor: pointer;
+            width: 100%;
         }
+
         button:hover {
-            background-color: #45a049;
+            background-color: #0056b3;
         }
-        .message {
+
+        #status, #computerID {
             margin-top: 15px;
-            padding: 10px;
-            border-radius: 8px;
+            color: green;
         }
-        .success {
-            background-color: #dff0d8;
-            color: #3c763d;
-        }
-        .error {
-            background-color: #f2dede;
-            color: #a94442;
+
+        #navigate {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-<div class="form-container">
-    <h2>Create PIN for Your Computer ID</h2>
-    <form id="pinForm">
-        <label for="computerId">Computer ID:</label>
-        <input type="text" id="computerId" readonly>
-
-        <label for="pin">Enter a 4-digit PIN:</label>
-        <input type="password" id="pin" maxlength="4" placeholder="Enter 4-digit PIN" required>
-
-        <button type="submit">Save PIN</button>
-    </form>
-
-    <div id="message" class="message" style="display:none;"></div>
+<div id="container">
+    <h1>Sign Up</h1>
+    <input type="password" id="pin" placeholder="Create a PIN" maxlength="6" />
+    <label>
+        <input type="checkbox" id="isDeveloper" /> Are you a developer?
+    </label>
+    <button id="signup">Sign Up</button>
+    <div id="status"></div>
+    <p id="computerID"></p>
+    <div id="navigate">Already have a PIN? <a href="loginsystem.html">Login here</a></div>
 </div>
 
 <script>
-// Function to generate a unique Computer ID (simplified)
-function generateComputerId() {
-    let computerId = localStorage.getItem('computerId');
-    
-    // If the computer ID is already saved, return it
-    if (computerId) {
-        return computerId;
+    async function openDatabase() {
+        return new Promise((resolve, reject) => {
+            const request = indexedDB.open('UserDatabase', 1);
+
+            request.onupgradeneeded = function(event) {
+                const db = event.target.result;
+                // Create object stores if they don't exist
+                if (!db.objectStoreNames.contains('users')) {
+                    db.createObjectStore('users', { keyPath: 'computerID' });
+                }
+                if (!db.objectStoreNames.contains('computers')) {
+                    db.createObjectStore('computers', { keyPath: 'computerID' });
+                }
+            };
+
+            request.onsuccess = function(event) {
+                resolve(event.target.result);
+            };
+
+            request.onerror = function(event) {
+                reject(event);
+            };
+        });
     }
-    
-    // Otherwise, generate a new one and save it
-    computerId = 'COMP-' + Math.random().toString(36).substr(2, 9).toUpperCase();
-    localStorage.setItem('computerId', computerId);
-    return computerId;
-}
 
-// Automatically assign user to basic mode
-function assignBasicMode() {
-    localStorage.setItem('userMode', 'basic');
-}
+    async function addUser(computerID, pin, isDeveloper) {
+        const db = await openDatabase();
+        const transaction = db.transaction(['users'], 'readwrite');
+        const store = transaction.objectStore('users');
+        store.put({ computerID, pin });
 
-// Save PIN and Computer ID in localStorage
-function savePin(pin) {
-    const computerId = generateComputerId();
-    localStorage.setItem('computerId', computerId);
-    localStorage.setItem('userPin', pin);
+        // Add to computers store
+        const computerTransaction = db.transaction(['computers'], 'readwrite');
+        const computerStore = computerTransaction.objectStore('computers');
+        computerStore.put({ computerID, isDeveloper });
 
-    // Assign basic mode automatically
-    assignBasicMode();
-}
-
-// Display computer ID in the input field
-document.getElementById('computerId').value = generateComputerId();
-
-// Handle form submission
-document.getElementById('pinForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const pin = document.getElementById('pin').value;
-    const message = document.getElementById('message');
-
-    // Simple validation for 4-digit PIN
-    if (pin.length === 4 && /^[0-9]+$/.test(pin)) {
-        savePin(pin);
-        message.style.display = 'block';
-        message.textContent = 'Your PIN has been saved! Redirecting to login...';
-        message.className = 'message success';
-        
-        // Redirect to login page after a short delay
-        setTimeout(function() {
-            window.location.href = 'loginsystem.html';
-        }, 2000); // 2 second delay before redirecting
-    } else {
-        message.style.display = 'block';
-        message.textContent = 'Please enter a valid 4-digit PIN.';
-        message.className = 'message error';
+        return new Promise((resolve) => {
+            transaction.oncomplete = () => resolve(true);
+        });
     }
-});
+
+    async function getNextComputerID() {
+        const db = await openDatabase();
+        const transaction = db.transaction(['users'], 'readonly');
+        const store = transaction.objectStore('users');
+        const request = store.getAll();
+
+        return new Promise((resolve) => {
+            request.onsuccess = function(event) {
+                const users = event.target.result;
+                const nextID = users.length > 0 ? Math.max(...users.map(user => user.computerID)) + 1 : 1;
+                resolve(nextID);
+            };
+        });
+    }
+
+    async function displayComputerID() {
+        const computerID = await getNextComputerID();
+        document.getElementById('computerID').textContent = `Your Computer ID: ${computerID}`;
+        return computerID;
+    }
+
+    document.getElementById('signup').addEventListener('click', async () => {
+        const pin = document.getElementById('pin').value;
+        const isDeveloper = document.getElementById('isDeveloper').checked;
+        const statusElement = document.getElementById('status');
+        const computerID = await displayComputerID();
+
+        // Check if user already exists
+        const userExists = await getUser(computerID);
+        if (userExists) {
+            statusElement.textContent = 'User already exists!';
+            statusElement.style.color = 'red';
+        } else {
+            // Save new user
+            await addUser(computerID, pin, isDeveloper);
+            statusElement.textContent = 'User created successfully!';
+            statusElement.style.color = 'green';
+        }
+    });
+
+    async function getUser(computerID) {
+        const db = await openDatabase();
+        const transaction = db.transaction(['users'], 'readonly');
+        const store = transaction.objectStore('users');
+        const request = store.get(computerID);
+
+        return new Promise((resolve) => {
+            request.onsuccess = function(event) {
+                resolve(event.target.result);
+            };
+        });
+    }
+
+    // Load computer ID on page load
+    displayComputerID();
 </script>
 
 </body>

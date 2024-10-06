@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini gameweb</title>
+  <title>Gameweb</title>
   <style>
     * {
       margin: 0;
@@ -72,13 +72,7 @@
     <!-- Navigation buttons -->
     <a href="index.html">Home</a>
     <a href="Mainhub.html">Mainhub</a>
-    <a href="freegameweb.html">Free Gameweb</a>
-    <li><a href="paidgameweb.html">Paid Gameweb</a></li>
-
-    <!-- Iframe control -->
-    <label for="iframeSrc">Iframe URL:</label>
-    <input type="text" id="iframeSrc" placeholder="Enter URL">
-    <button onclick="changeIframeSrc()">Change Src</button>
+    <a href="weakgameweb.html">Free Gameweb</a>
 
     <!-- FPS control -->
     <label for="fpsInput">FPS:</label>
@@ -89,18 +83,10 @@
     <button onclick="toggleIframeFullScreen()">Fullscreen</button>
   </div>
 
-  <iframe id="iframeContent" src=""></iframe>
+  <iframe id="iframeContent" src="https://s3dc3q-8080.csb.app/"></iframe>
 </div>
 
 <script>
-  function changeIframeSrc() {
-    const iframe = document.getElementById('iframeContent');
-    const newSrc = document.getElementById('iframeSrc').value;
-    if (newSrc) {
-      iframe.src = newSrc.startsWith('http') ? newSrc : `https://${newSrc}`;
-    }
-  }
-
   function toggleIframeFullScreen() {
     const iframe = document.getElementById('iframeContent');
     if (iframe.requestFullscreen) {
