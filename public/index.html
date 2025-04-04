@@ -51,11 +51,25 @@
              left: 50%;
              transform: translate(-50%, -50%);
          }
+
+         .small-text {
+             font-size: 0.6em;
+             font-family: 'Arial', Courier, monospace;
+             color: #bcbcbc;
+             position: absolute;
+             top: 40%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+         }
      </style>
  </head>
  <body>
      <div class="enlarged-text">
-      <h1>Greatsword</h1>
+      <h1>Search</h1>
+     </div>
+     <div class="small-text">
+      <h2>Powered by GreatSword v3</h2>
+      <h2></h2>
      </div>
 <style>
    body {
@@ -67,8 +81,9 @@
 <div class="title">
  <h1 id="title1"></h1>
 </div>
+
 <div class="searchbox" id="searchbox">
- <input class="search" id="search" placeholder='Search Google or input a URL...' type='text'/>
+ <input class="search" id="search" placeholder='Search DuckDuckGo or enter a URL...' type='text'/>
 </div>
 <div class="icons">
 </div>
@@ -253,16 +268,6 @@ document.addEventListener("keypress", function onEvent(event) {
     </style>
   </head>
   <body>
-    <div class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="games.html">Games</a></li>
-        <li><a href="chat.html">Chat</a></li>
-        <li><a href="https://discord.gg/BMxe6D9CKv">Discord</a></li>
-        <li><a href="https://github.com/Tacogamerman/Greatsword-v3">GitHub</a></li>
-        <li class="navbar-brand">Sword Stuff</li>
-      </ul>
-    </div>
     <style>
         .button-container {
           position: fixed;
@@ -289,13 +294,11 @@ document.addEventListener("keypress", function onEvent(event) {
     </head>
     <body>
       <div class="button-container">
-        <a href="games.html" class="button">Greatsword Games</a>
-                <script>
+            <script>
             function blank(){
               (function () {var url = document.URL; var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement("iframe"); iframe.style.border = "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe); var script = win.document.createElement("script"); script.src = ""; win.document.body.appendChild(script); })();
             }
             </script>
             <button onclick="blank();">Open in about:blank</button>
-            <a href="more.html" class="button">More...</a>
 
       </div>

@@ -18,8 +18,8 @@ const proxy = new Corrosion({
     forceHttps: true,
     requestMiddleware: [
         Corrosion.middleware.blacklist([
-            "accounts.google.com",
-        ], "Page is blocked"),
+            "accounts.google.com, pornhub.com, xvideos.com, xnxx.com, xhamster.com, chaturbate.com, pornhubpremium.com",
+        ], "Page is blocked by NeonWave. NeonWave does not allow you to access innapropriate content, please go back and find something else to unblock. Sorry."),
     ]
 });
 
